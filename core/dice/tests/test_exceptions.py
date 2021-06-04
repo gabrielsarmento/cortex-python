@@ -3,25 +3,25 @@ import pytest
 
 @pytest.fixture
 def die_exception():
-    from cortex.dice.exceptions import DieException
+    from core.dice.exceptions import DieException
     return DieException
 
 
 @pytest.fixture
 def die_faces_value_exception():
-    from cortex.dice.exceptions import DieFacesValueException
+    from core.dice.exceptions import DieFacesValueException
     return DieFacesValueException
 
 
 @pytest.fixture
 def die_operation_exception():
-    from cortex.dice.exceptions import DieOperationException
+    from core.dice.exceptions import DieOperationException
     return DieOperationException
 
 
 def test_should_exists_a_die_base_exception():
     try:
-        from cortex.dice.exceptions import DieException  # noqa
+        from core.dice.exceptions import DieException  # noqa
     except ImportError:
         pytest.fail('Cannot import DieException')
 
@@ -32,7 +32,7 @@ def test_die_exception_should_be_a_exception(die_exception):
 
 def test_should_exists_a_die_faces_value_exception():
     try:
-        from cortex.dice.exceptions import DieFacesValueException  # noqa
+        from core.dice.exceptions import DieFacesValueException  # noqa
     except ImportError:
         pytest.fail('Cannot import DieFacesValueException')
 
@@ -46,7 +46,7 @@ def test_die_faces_value_exception_should_be_a_die_exception(
 
 def test_should_exists_a_die_operation_exception():
     try:
-        from cortex.dice.exceptions import DieOperationException  # noqa
+        from core.dice.exceptions import DieOperationException  # noqa
     except ImportError:
         pytest.fail('Cannot import DieOperationException')
 

@@ -1,4 +1,4 @@
-from cortex.dice.constants import DIE_FACES_NUMBERS
+from core.dice.constants import DIE_FACES_NUMBERS
 
 
 def test_die_faces_numbers_must_be_valid():
